@@ -1,1 +1,1 @@
-/home/malhar/.zprofile
+./.config/.profile

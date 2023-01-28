@@ -1,8 +1,9 @@
 #!/bin/zsh -
 
-#clear and exit
+#basics
 alias c='clear'
 alias ':q'='exit'
+alias l="ls -hN --color=auto --group-directories-first"
 
 #nvim
 alias v='nvim'

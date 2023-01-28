@@ -41,5 +41,7 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
   }
 }
+  use 'lukas-reineke/indent-blankline.nvim'
+
 
 end)

@@ -14,7 +14,7 @@ HISTFILE="$HOME/.config/shell/history"
 
 # Basic auto/tab complete:
 autoload -U compinit
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.

@@ -43,3 +43,4 @@ alias \
 	e="$EDITOR" \
 	v="$EDITOR" \
 	
+alias open='xdg-open'

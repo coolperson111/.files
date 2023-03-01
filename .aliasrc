@@ -10,6 +10,9 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
+#python
+alias py='python3'
+
 #source
 alias s='source'
 

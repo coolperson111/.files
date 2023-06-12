@@ -15,32 +15,20 @@ return require('packer').startup(function(use)
 
     use 'navarasu/onedark.nvim'
 
-    use 'Mofiqul/dracula.nvim'
-
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            {                                      -- Optional
-            {'neovim/nvim-lspconfig'},             -- Required
-            'williamboman/mason.nvim',
-            run = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end,
-            },
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
-        }
-    }
-
     use 'lukas-reineke/indent-blankline.nvim'
 
+    use 'nvim-tree/nvim-tree.lua'
+
+    use 'nvim-tree/nvim-web-devicons'
+
+    use 'nvim-lualine/lualine.nvim'
+
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
 
 end)

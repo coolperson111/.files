@@ -13,3 +13,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 [ -f ~/.zshrc ] && source ~/.zshrc
+
+export PATH="$PATH:/home/malhar/.local/bin"
+
+export PATH=$PATH:/usr/local/go/bin

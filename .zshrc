@@ -54,3 +54,5 @@ bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
 eval "$(starship init zsh)"
+
+export PATH="$PATH:/home/malhar/.local/bin"

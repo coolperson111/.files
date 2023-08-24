@@ -34,7 +34,10 @@ require("lspconfig").clangd.setup {
     capabilities = capabilities
 }
 
-
+require("lspconfig").pylsp.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

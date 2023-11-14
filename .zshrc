@@ -15,6 +15,7 @@ HISTFILE="$HOME/.config/shell/history"
 autoload -U compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit
+zmodload -i zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
 
 # vi mode

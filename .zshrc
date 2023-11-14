@@ -4,8 +4,8 @@ setopt autocd		# Automatically cd into typed directory.
 setopt interactive_comments
 
 # History in cache directory:
-HISTSIZE=10000000
-SAVEHIST=10000000
+HISTSIZE=1000000
+SAVEHIST=1000000
 HISTFILE="$HOME/.config/shell/history"
 
 # Load aliases and shortcuts if existent.
@@ -13,9 +13,8 @@ HISTFILE="$HOME/.config/shell/history"
 
 # Basic auto/tab complete:
 autoload -U compinit
-zstyle ':completion:*' menu select matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zmodload zsh/complist
-compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 # vi mode
@@ -56,3 +55,4 @@ bindkey -M visual '^[[P' vi-delete
 export PATH="$PATH:/home/malhar/.local/bin"
 
 eval "$(starship init zsh)"
+export PATH="$PATH:$HOME/.local/Programs/flutter/bin"

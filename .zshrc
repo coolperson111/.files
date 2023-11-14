@@ -56,4 +56,6 @@ bindkey -M visual '^[[P' vi-delete
 export PATH="$PATH:/home/malhar/.local/bin"
 
 eval "$(starship init zsh)"
+# for flutter
 export PATH="$PATH:$HOME/.local/Programs/flutter/bin"
+export CHROME_EXECUTABLE=/usr/bin/thorium-browser

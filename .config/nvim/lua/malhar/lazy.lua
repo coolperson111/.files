@@ -14,19 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.0',
+        tag = '0.1.5',
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope-ui-select.nvim" -- interactive code actions
         }
     },
     'navarasu/onedark.nvim',
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = function()
-            require("nvim-treesitter.install").update({ with_sync = true })
-        end,
-    },
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     'lukas-reineke/indent-blankline.nvim',
     {
         "nvim-neo-tree/neo-tree.nvim",

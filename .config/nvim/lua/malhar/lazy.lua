@@ -40,6 +40,8 @@ local plugins = {
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     },
+    -- GitHub CoPilot
+    'github/copilot.vim',
     -- autocomplete
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',

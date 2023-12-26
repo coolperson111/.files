@@ -60,3 +60,12 @@ eval "$(starship init zsh)"
 # for flutter
 export PATH="$PATH:$HOME/.local/Programs/flutter/bin"
 export CHROME_EXECUTABLE=/usr/bin/thorium-browser
+
+# for Go
+export PATH=$PATH:/usr/local/go/bin
+
+# For android SDK
+export PATH="$HOME/android_sdk/latest/cmdline-tools/bin:$PATH"
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin

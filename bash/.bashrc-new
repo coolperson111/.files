@@ -1,0 +1,14 @@
+# BASHRC
+
+# autocd
+shopt -s autocd
+shopt -s histappend
+
+# infinite history size
+HISTFILE=HISTFILESIZE
+
+# aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+

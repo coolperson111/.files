@@ -20,7 +20,7 @@
 format = """
 $sudo\
 $username\
-$os\
+$os \
 $directory\
 $git_branch\
 $git_commit\

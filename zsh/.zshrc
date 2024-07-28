@@ -70,7 +70,8 @@ export PATH="$HOME/android_sdk/latest/cmdline-tools/bin:$PATH"
 
 # Java home for maven
 # export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 
+# export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 
+export JAVA_HOME=/home/malhar/.jdks/openjdk-22.0.1/
 export PATH=$PATH:$JAVA_HOME/bin
 
 export NVM_DIR="$HOME/.nvm"
@@ -81,4 +82,18 @@ eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Set up fzf key bindings and fuzzy completion
+# source <(fzf --zsh)
 
+if [ -e /home/malhar/.nix-profile/etc/profile.d/nix.sh ]; then . /home/malhar/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+
+# For Yazi
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	\rm -f -- "$tmp"
+}

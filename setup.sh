@@ -1,5 +1,25 @@
 #!/bin/bash
 
+# THINGS NEEDED TO INSTALL
+# starship ^^
+# zoxide ^^
+# GitHub CLI (gh) ^^
+# fzf ^^
+# Nerd Font ^^
+# Kitty ^^
+# dotfiles ^^
+# NPM and node (for installing other things in neovim) ^^
+# GO ^^
+# GNU Stow ^^
+# Flutter (dartls, android sdk, eveything)
+# JAVA (21, 17, etc) - Mvn, IntelliJ, everything
+# Whatever other languages i might be working in
+# MySQL
+# ROFI
+# eza and bat
+# yazi - Terminal file browser
+# rofi - Dmenu replacement run things
+
 sudo apt update
 sudo apt upgrade
 sudo apt clean

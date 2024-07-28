@@ -1,5 +1,5 @@
 --[[
--- Setup initial configuration,
+-- Setup initial configuration, Malhar
 -- 
 -- Primarily just download and execute lazy.nvim
 --]]
@@ -33,3 +33,19 @@ require('lazy').setup({ import = 'plugins' }, {
 -- Loading keymaps, options and terminal options
 require 'custom'
 vim.opt.formatoptions:remove 'o'
+
+-- Templates for different filetypes if I want to set
+local function load_template(ext)
+  return string.format('0r ~/.config/nvim/templates/%s_template.tpl', ext)
+end
+
+vim.api.nvim_create_autocmd({ 'BufNewFile' }, {
+  pattern = {
+    '*.cpp',
+    -- '*.java'
+  }, -- Add more patterns as needed
+  callback = function()
+    local ext = vim.fn.expand '%:e'
+    vim.cmd(load_template(ext))
+  end,
+})

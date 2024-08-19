@@ -3,11 +3,10 @@
 #basics
 alias c='clear'
 alias ':q'='exit'
-alias l="ls -hN --color=auto --group-directories-first"
+alias l="eza -hH"
 
 #nvim
 alias v='nvim'
-alias vi='nvim'
 alias vim='nvim'
 
 #python
@@ -36,11 +35,12 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ls="eza -hH" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
-    sl="sl -eFa"
-	ip="ip -color=auto"
+  sl="sl -eFa" \
+	ip="ip -color=auto" \
+  cat="bat"
 
 # These common commands are just too long! Abbreviate them.
 alias \

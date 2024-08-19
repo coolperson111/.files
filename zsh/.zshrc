@@ -12,6 +12,7 @@ HISTFILE="$HOME/.config/shell/history"
 [ -f "$HOME/.config/.aliasrc" ] && source "$HOME/.config/.aliasrc"
 
 # Basic auto/tab complete:
+fpath+=~/.zfunc
 autoload -U compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit

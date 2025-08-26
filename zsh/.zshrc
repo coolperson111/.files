@@ -84,7 +84,7 @@ eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set up fzf key bindings and fuzzy completion
-# source <(fzf --zsh)
+source <(fzf --zsh)
 
 if [ -e /home/malhar/.nix-profile/etc/profile.d/nix.sh ]; then . /home/malhar/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 

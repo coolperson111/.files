@@ -82,7 +82,7 @@ return {
         --  For example, in C this would take you to the header.
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
-       -- The following autocommand is used to enable inlay hints in your
+        -- The following autocommand is used to enable inlay hints in your
         -- code, if the language server you are using supports them
         --
         -- This may be unwanted, since they displace some of your code
@@ -131,7 +131,7 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      tsserver = {
+      ts_ls = {
         init_options = {
           preferences = {
             disableSuggestions = true,
@@ -162,6 +162,12 @@ return {
       jsonls = {},
 
       marksman = {},
+
+      omnisharp = {
+        cmd = { '/home/malhar/.local/share/nvim/mason/bin/omnisharp-roslyn', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
+      },
+
+      -- omnisharp_mono = {}
     }
 
     require('mason').setup()

@@ -40,7 +40,7 @@ alias \
 	diff="diff --color=auto" \
   sl="sl -eFa" \
 	ip="ip -color=auto" \
-  cat="bat"
+  cat="batcat"
 
 # These common commands are just too long! Abbreviate them.
 alias \
@@ -48,3 +48,17 @@ alias \
 	v="$EDITOR" \
 
 alias open='xdg-open'
+
+alias \
+  gs="git status" \
+  ga="git add" \
+  gc="git commit" \
+  gd="git diff" \
+  gp="git push" \
+  gco="git checkout" \
+  gpull="git pull" \
+  gcl="git clone" \
+  gbr="git branch" \
+  gdf="git diff" \
+  gsta="git stash" \
+  gstp="git stash pop"

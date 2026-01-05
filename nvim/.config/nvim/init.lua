@@ -42,6 +42,7 @@ end
 vim.api.nvim_create_autocmd({ 'BufNewFile' }, {
   pattern = {
     '*.cpp',
+    '*.qmd',
     -- '*.java'
   }, -- Add more patterns as needed
   callback = function()

@@ -3,11 +3,10 @@
 #basics
 alias c='clear'
 alias ':q'='exit'
-alias l="ls -hN --color=auto --group-directories-first"
+alias l="eza -hH"
 
 #nvim
 alias v='nvim'
-alias vi='nvim'
 alias vim='nvim'
 
 #python
@@ -36,11 +35,12 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ls="eza -hH" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
-    sl="sl -eFa"
-	ip="ip -color=auto"
+  sl="sl -eFa" \
+	ip="ip -color=auto" \
+  cat="batcat"
 
 # These common commands are just too long! Abbreviate them.
 alias \
@@ -48,3 +48,17 @@ alias \
 	v="$EDITOR" \
 
 alias open='xdg-open'
+
+alias \
+  gs="git status" \
+  ga="git add" \
+  gc="git commit" \
+  gd="git diff" \
+  gp="git push" \
+  gco="git checkout" \
+  gpull="git pull" \
+  gcl="git clone" \
+  gbr="git branch" \
+  gdf="git diff" \
+  gsta="git stash" \
+  gstp="git stash pop"

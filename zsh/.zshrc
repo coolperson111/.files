@@ -12,6 +12,7 @@ HISTFILE="$HOME/.config/shell/history"
 [ -f "$HOME/.config/.aliasrc" ] && source "$HOME/.config/.aliasrc"
 
 # Basic auto/tab complete:
+fpath+=~/.zfunc
 autoload -U compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit
@@ -80,10 +81,10 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(zoxide init zsh)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set up fzf key bindings and fuzzy completion
-# source <(fzf --zsh)
+source <(fzf --zsh)
 
 if [ -e /home/malhar/.nix-profile/etc/profile.d/nix.sh ]; then . /home/malhar/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
@@ -97,3 +98,14 @@ function yy() {
 	fi
 	\rm -f -- "$tmp"
 }
+
+# bun completions
+[ -s "/home/malhar/.bun/_bun" ] && source "/home/malhar/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

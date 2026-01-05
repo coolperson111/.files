@@ -1,15 +1,15 @@
 return {
   'github/copilot.vim',
-  lazy = true,
+  -- lazy = true,
   config = function()
     -- disable copilot by default
     --
     -- b:copilot_enabled       Set to v:false to disable GitHub Copilot for the
     --                         current buffer.  Or set to v:true to force enabling
     --                         it, overriding g:copilot_filetypes.
-    vim.cmd 'Copilot disable'
+    -- vim.cmd 'Copilot disable'
 
-    local copilot_on = false
+    local copilot_on = true
 
     -- function to toggle copilot
     vim.api.nvim_create_user_command('CopilotToggle', function()

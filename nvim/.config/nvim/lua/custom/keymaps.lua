@@ -53,8 +53,11 @@ set("i", "(<CR>" ,"(<CR>)<Esc>ko")
 set("n", "<leader>x", "<cmd>.lua<CR>", { desc = "Execute the current line" })
 set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Execute the current file" })
 
+-- Quarto nvim - (https://youtu.be/hp7FFr9oM1k?feature=shared)
+-- set("n", "<m-i>", "i```{python}<cr>```<esc>O", { desc = "[i]nsert code chunk"})
+
 --Control height of splits
-set("n", "<C-,>", "<c-w>5<")
-set("n", "<C-.>", "<c-w>5>")
--- set("n", "<M-t>", "<c-w>+")
--- set("n", "<M-s>", "<c-w>-")
+set("n", "<C-Left>", "<c-w>5<")
+set("n", "<C-Right>", "<c-w>5>")
+set("n", "<C-Up>", "<c-w>+")
+set("n", "<C-Down>", "<c-w>-")

@@ -31,7 +31,7 @@ return {
   },
   config = function()
     -- For JAVA only
-    require('java').setup()
+    -- require('java').setup()
 
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
@@ -82,7 +82,7 @@ return {
         --  For example, in C this would take you to the header.
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
-       -- The following autocommand is used to enable inlay hints in your
+        -- The following autocommand is used to enable inlay hints in your
         -- code, if the language server you are using supports them
         --
         -- This may be unwanted, since they displace some of your code
@@ -101,6 +101,8 @@ return {
     --  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+
+    capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
 
     -- Enable the following language servers
     --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -129,7 +131,7 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      tsserver = {
+      ts_ls = {
         init_options = {
           preferences = {
             disableSuggestions = true,
@@ -160,6 +162,12 @@ return {
       jsonls = {},
 
       marksman = {},
+
+      omnisharp = {
+        cmd = { '/home/malhar/.local/share/nvim/mason/bin/omnisharp-roslyn', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
+      },
+
+      -- omnisharp_mono = {}
     }
 
     require('mason').setup()

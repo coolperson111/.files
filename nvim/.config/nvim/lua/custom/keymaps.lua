@@ -24,6 +24,10 @@ set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Move to next and Prev tab in MacOS
+set('n', '<M-Right>', ':tabnext<CR>', { desc = 'Move to next tab' })
+set('n', '<M-Left>', ':tabprevious<CR>', { desc = 'Move to previous tab' })
+
 
 -- [[ Keymaps - Personal ]]
 

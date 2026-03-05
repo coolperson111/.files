@@ -29,14 +29,20 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       -- Conform can also run multiple formatters sequentially
-      python = { "isort", "black" },
+      python = { 'isort', 'black' },
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
-      javascript = { "prettier" },
 
-      go = { "gofumpt", "goimports-reviser" },
+      go = { 'gofumpt', 'goimports-reviser' },
 
-      cpp = { "clang-format" }
+      cpp = { 'clang-format' },
+
+      javascript = { 'prettier' },
+      typescriptreact = { 'prettier' },
+      javascriptreact = { 'prettier' },
+      typescript = { 'prettier' },
+      html = { 'prettier' },
+      css = { 'prettier' },
     },
   },
 }

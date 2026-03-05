@@ -16,18 +16,13 @@ return {
     { 'folke/neodev.nvim', opts = {} },
 
     -- JAVA
-    {
-      'nvim-java/nvim-java',
-      dependencies = {
-        'nvim-java/nvim-java-refactor',
-        'nvim-java/lua-async-await',
-        'nvim-java/nvim-java-core',
-        'nvim-java/nvim-java-test',
-        'nvim-java/nvim-java-dap',
-        'MunifTanjim/nui.nvim',
-        'mfussenegger/nvim-dap',
-      },
-    },
+    -- {
+    --   'nvim-java/nvim-java',
+    --   config = function()
+    --     require('java').setup()
+    --     vim.lsp.enable 'jdtls'
+    --   end,
+    -- },
   },
   config = function()
     -- For JAVA only
@@ -109,7 +104,7 @@ return {
     local servers = {
       clangd = {},
 
-      gopls = {
+      --[[ gopls = {
         cmd = { 'gopls' },
         -- filetypes = {"go", "gomod", "gowork", "gotmpl" },
         -- root_dir = util.root_pattern("go.mod", "go.work"),
@@ -123,15 +118,24 @@ return {
             -- staticcheck = true,
           },
         },
+      }, ]]
+
+      ruff = {
+        init_options = {
+          settings = {
+            -- Ruff language server settings go here
+          },
+        },
       },
 
-      pyright = {},
+      ty = {},
 
       -- Some languages (like typescript) have entire language plugins that can be useful:
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       ts_ls = {
+        filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
         init_options = {
           preferences = {
             disableSuggestions = true,
@@ -163,9 +167,9 @@ return {
 
       marksman = {},
 
-      omnisharp = {
-        cmd = { '/home/malhar/.local/share/nvim/mason/bin/omnisharp-roslyn', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
-      },
+      -- omnisharp = {
+      --   cmd = { '/home/malhar/.local/share/nvim/mason/bin/omnisharp-roslyn', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
+      -- },
 
       -- omnisharp_mono = {}
     }
